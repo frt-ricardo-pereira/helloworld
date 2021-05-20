@@ -1,32 +1,38 @@
 import React from "react"
+import { graphql } from "gatsby"
 import Layout from "../shared/mainlayout"
-export default function OurTeam() {
+import Seo from "../components/seo"
+
+const OurTeam = ({ data }) => {
+  const { markdownRemark: post } = data
+  const {edges : members} = data.allMarkdownRemark
   return (
     <Layout>
+      <Seo title={post.frontmatter.teamTitle1 + " " + post.frontmatter.teamTitle2}></Seo>
       <div class="bg-gray-50 bg-opacity-40 ">
         <div class="max-w-7xl mx-auto py-12 px-4 text-center sm:px-6 lg:px-8  ">
           <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">
-            Meet <span class="text-sunset-600"> our team</span>
+          {post.frontmatter.teamTitle1}  <span class="text-sunset-600"> {post.frontmatter.teamTitle2} </span>
           </h2>
           <div class="space-y-12 shadow-lg border-2 border-gray-100 mt-4 p-4">
             <div class="space-y-5 sm:mx-auto sm:max-w-xl sm:space-y-4 lg:max-w-5xl">
               <p class="text-xl text-gray-500">
-                Ornare sagittis, suspendisse in hendrerit quis. Sed dui aliquet
-                lectus sit pretium egestas vel mattis neque.
+              {post.frontmatter.teamSubTitle} 
               </p>
             </div>
             <ul class="mx-auto space-y-16 sm:grid sm:grid-cols-2 sm:gap-16 sm:space-y-0 lg:grid-cols-3 lg:max-w-5xl">
-              <li>
+            {members.map((node) => <li key={node.toString()}> 
+            
                 <div class="space-y-6">
                   <img
-                    class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56"
-                    src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80"
+                    class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56 object-cover"
+                    src={node.node.frontmatter.photo}
                     alt=""
                   ></img>
                   <div class="space-y-2">
                     <div class="text-lg leading-6 font-medium space-y-1">
-                      <h3>Whitney Francis</h3>
-                      <p class="text-sunset-500 font-inter_bold">Copywriter</p>
+                      <h3>{node.node.frontmatter.name}</h3>
+                      <p class="text-sunset-500 font-inter_bold">{node.node.frontmatter.job}</p>
                     </div>
                     <ul class="flex justify-center space-x-5">
                       <li>
@@ -65,10 +71,14 @@ export default function OurTeam() {
                           </svg>
                         </a>
                       </li>
+                    
                     </ul>
                   </div>
                 </div>
-              </li>
+                </li>  )}
+
+
+              
             </ul>
           </div>
         </div>
@@ -76,3 +86,31 @@ export default function OurTeam() {
     </Layout>
   )
 }
+
+
+export default OurTeam
+
+export const OurTeamPageQuery = graphql`
+  query OurTeamPageQuery($id: String!) {
+    markdownRemark(id: { eq: $id }) {
+      html
+      frontmatter {
+        teamTitle1
+        teamTitle2
+        teamSubTitle
+      }
+    }
+    allMarkdownRemark(filter: {frontmatter: {templatekey: {eq: "teamMember"}}}) {
+        edges {
+          node {
+            id
+            frontmatter {
+             photo
+             name
+             job
+            }
+          }
+        }
+    } 
+  }
+`

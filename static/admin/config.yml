@@ -6,9 +6,31 @@ media_folder: static/img
 public_folder: /img
 
 collections:
+  - name: "team"
+    label: "Team Members"
+    folder: "src/markdown-content/teamMembers"
+    create: true
+    slug: "{{name}}-{{month}}-{{day}}"
+    fields:
+      - {label: "template", name: "templatekey" , widget: "hidden", default: 'teamMember'}
+      - {label: "Photo", name: "photo" , widget: "image"}
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Job", name: "job", widget: "string"}
+      - {label: "Twitter", name: "twitter", widget: "string", required: false}
+      - {label: "facebook", name: "facebook", widget: "string" , required: false}
+      - {label: "Linkedin", name: "linkedin", widget: "string", required: false}
   - name: 'pages'
     label: 'Pages'
     files:
+      - file: "src/markdown-content/ourteam.md"
+        name: "ourteam"
+        label: "Team - Title and Subtitle"
+        editor:
+        preview: true
+        fields:
+          - {label: 'Team Title 1', name: 'teamTitle1', widget: 'string'}
+          - {label: 'Team Title 2', name: 'teamTitle2', widget: 'string'}
+          - {label: 'Team SubTitle', name: 'teamSubTitle', widget: 'string'}
       - file: "src/markdown-content/index.md"
         name: 'index'
         label: 'Intro'

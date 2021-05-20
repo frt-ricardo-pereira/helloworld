@@ -1,5 +1,6 @@
 ---
 templatekey: index
+page: true
 slug: /
 introTitle1: < Coding
 introTitle2: for integration >
