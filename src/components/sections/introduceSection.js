@@ -34,7 +34,7 @@ export default function IntroduceSection({
         <div class="lg:col-span-6 flex mx-auto  mt-10 ">
           <Rotate bottom left>
             <div class="flex justify-center mt-2">
-              <img style={{width:"auto"}, {height:"300px"}} class="  w-auto  " src={FuseImage} alt=""></img>
+              <img  class="  w-auto  " src={FuseImage} alt=""></img>
             </div>
           </Rotate>
         </div>
