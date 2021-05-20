@@ -9,10 +9,11 @@ collections:
   - name: 'pages'
     label: 'Pages'
     files:
-      - file: "src/markdown-pages/index.md"
+      - file: "src/markdown-content/index.md"
         name: 'index'
         label: 'Intro'
         editor:
+        preview: true
         fields:
           - {label: 'Index', name: 'slug', widget: 'hidden', default: '/'}
           - {label: 'Intro - Title 1', name: 'introTitle1', widget: 'string'}
@@ -40,4 +41,3 @@ collections:
           - {label: 'NewsLetter - Title 2', name: 'newsletterTitle2', widget: 'string'}
           - {label: 'NewsLetter - Button Subscribe Name', name: 'newsletterSubscribeName', widget: 'string'}
        
-local_backend: true
