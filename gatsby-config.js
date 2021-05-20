@@ -14,7 +14,6 @@
     siteUrl: "https://fuse.org",
   },
   plugins: [
-    `gatsby-plugin-postcss`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -54,5 +53,6 @@
         modulePath: `${__dirname}/src/cms/cms.js`,
       },
     },
+    `gatsby-plugin-postcss`,
   ],
 }

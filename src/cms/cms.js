@@ -1,5 +1,5 @@
 import CMS from 'netlify-cms-app'
-import styles from './src/styles/global.css'
+import styles from '../styles/global.css'
 
 import IndexPreview from './preview-templates/IndexPreview'
 
