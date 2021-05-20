@@ -6,7 +6,7 @@ export default function OurTeam() {
       <div class="bg-gray-50 bg-opacity-40 ">
         <div class="max-w-7xl mx-auto py-12 px-4 text-center sm:px-6 lg:px-8  ">
           <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">
-            Meet <span class="text-sunset-500"> our team</span>
+            Meet <span class="text-sunset-600"> our team</span>
           </h2>
           <div class="space-y-12 shadow-lg border-2 border-gray-100 mt-4 p-4">
             <div class="space-y-5 sm:mx-auto sm:max-w-xl sm:space-y-4 lg:max-w-5xl">

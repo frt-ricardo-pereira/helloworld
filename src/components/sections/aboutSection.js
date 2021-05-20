@@ -57,7 +57,7 @@ export default function AboutSection({
           <div class="-ml-36 sm:-ml-36 flex">
             <div
               style={{ borderRadius: "3rem" }}
-              class=" w-40 h-40 bg-yellow-500 rounded-3xl opacity-40 mt-12  flex flex-col justify-center items-center  "
+              class=" w-40 h-40 bg-yellow-500 rounded-3xl opacity-60 mt-12  flex flex-col justify-center items-center  "
             >
               <p class="text-4xl "> {aboutBallonName1}</p>
               <p class="text-2xl  ">{aboutBallonDescription1}</p>

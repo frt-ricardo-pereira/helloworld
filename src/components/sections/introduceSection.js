@@ -1,6 +1,7 @@
 import React from "react"
 import Fade from "react-reveal/Fade"
 import Rotate from "react-reveal/Rotate"
+import FuseImage from "../../../static/img/codingForDraw.svg"
 export default function IntroduceSection({
   introTitle1,
   introTitle2,
@@ -8,7 +9,7 @@ export default function IntroduceSection({
   introImage,
 }) {
   return (
-    <section class="bg-gray-50 bg-opacity-40 py-12 px-12 ">
+    <section class="bg-gray-50 bg-opacity-30 py-12 px-12 ">
       <div class="max-w-7xl  lg:grid lg:grid-cols-12 lg:gap-8 flex flex-col lg:flex-none mx-auto ">
         <div class="px-4 sm:px-6 sm:text-center  lg:col-span-6 lg:text-left lg:flex lg:items-center">
           <div>
@@ -33,7 +34,7 @@ export default function IntroduceSection({
         <div class="lg:col-span-6 flex mx-auto  mt-10 ">
           <Rotate bottom left>
             <div class="flex justify-center mt-2">
-              <img class="  w-auto  " src={introImage} alt=""></img>
+              <img style={{width:"auto"}, {height:"300px"}} class="  w-auto  " src={FuseImage} alt=""></img>
             </div>
           </Rotate>
         </div>

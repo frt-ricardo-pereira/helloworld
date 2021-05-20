@@ -5,6 +5,7 @@ const IndexPreview = ({ entry, getAsset }) => {
   const data = entry.getIn(["data"]).toJS()
 
   if (data) {
+    console.log(data.introTitle1)
     return (
       <IndexTemplate
         introTitle1={data.introTitle1}
