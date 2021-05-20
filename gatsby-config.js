@@ -26,7 +26,6 @@
         icon: `static/img/fuselogo.png`,
       },
     },
-    "gatsby-plugin-offline",
     "gatsby-plugin-react-helmet",
     {
       resolve: `gatsby-source-filesystem`,
