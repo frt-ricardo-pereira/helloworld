@@ -24,9 +24,9 @@ const OurTeam = ({ data }) => {
             {members.map((node) => <li key={node.toString()}> 
             
                 <div class="space-y-6">
-                  <img
-                    class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56 "
-                    src={node.node.frontmatter.photo+"?nf_resize=smartcrop&w=300&h=400"}
+                  <img width='300px' height='300px'
+                    class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56 object-cover"
+                    src={node.node.frontmatter.photo+"?nf_resize=smartcrop&w=300&h=300"}
                     alt=""
                   ></img>
                   <div class="space-y-2">
