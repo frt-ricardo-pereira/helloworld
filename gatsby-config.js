@@ -32,38 +32,12 @@
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: "uploads",
-        path: `${__dirname}/static/img`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
         name: `pages`,
         path: `${__dirname}/src/markdown-pages`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: "images",
-        path: `${__dirname}/src/img`,
-      },
-    },
-    {
-      resolve: 'gatsby-transformer-remark',
-      options: {
-        plugins: [          
-          {
-            resolve: 'gatsby-remark-copy-linked-files',
-            options: {
-              destinationDir: 'static',
-            },
-          },
-        ],
-      },
-    },
 
+    'gatsby-transformer-remark',
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {},
