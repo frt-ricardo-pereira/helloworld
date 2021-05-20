@@ -3,13 +3,13 @@ import Layout from "../shared/mainlayout"
 export default function OurTeam() {
   return (
     <Layout>
-      <div class="">
-        <div class="max-w-7xl mx-auto py-12 px-4 text-center sm:px-6 lg:px-8 lg:py-24  ">
-          <div class="space-y-12 shadow-lg border-2 border-gray-100 py-4">
+      <div class="bg-gray-50 bg-opacity-40 ">
+        <div class="max-w-7xl mx-auto py-12 px-4 text-center sm:px-6 lg:px-8  ">
+          <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">
+            Meet <span class="text-sunset-500"> our team</span>
+          </h2>
+          <div class="space-y-12 shadow-lg border-2 border-gray-100 mt-4 p-4">
             <div class="space-y-5 sm:mx-auto sm:max-w-xl sm:space-y-4 lg:max-w-5xl">
-              <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">
-                Meet <span class="text-sunset-700"> our team</span>
-              </h2>
               <p class="text-xl text-gray-500">
                 Ornare sagittis, suspendisse in hendrerit quis. Sed dui aliquet
                 lectus sit pretium egestas vel mattis neque.
@@ -30,7 +30,10 @@ export default function OurTeam() {
                     </div>
                     <ul class="flex justify-center space-x-5">
                       <li>
-                        <a href="Todo" class="text-gray-400 hover:text-gray-500">
+                        <a
+                          href="Todo"
+                          class="text-gray-400 hover:text-gray-500"
+                        >
                           <span class="sr-only">Twitter</span>
                           <svg
                             class="w-5 h-5"
@@ -43,7 +46,10 @@ export default function OurTeam() {
                         </a>
                       </li>
                       <li>
-                        <a href="ToDo" class="text-gray-400 hover:text-gray-500">
+                        <a
+                          href="ToDo"
+                          class="text-gray-400 hover:text-gray-500"
+                        >
                           <span class="sr-only">LinkedIn</span>
                           <svg
                             class="w-5 h-5"

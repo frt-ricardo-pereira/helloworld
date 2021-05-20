@@ -16,11 +16,11 @@ export default function AboutSection({
   aboutBallonDescription3
 }) {
   return (
-    <section class="bg-gray-50 bg-opacity-90 shadow">
-      <div class="max-w-7xl  lg:grid lg:grid-cols-12 lg:gap-8 flex flex-col lg:flex-none mx-auto ">
-        <div class="px-4 sm:px-6 sm:text-center  lg:col-span-6 lg:text-left lg:flex lg:items-center">
+    <section class=" shadow px-12">
+      <div class="max-w-7xl  lg:grid lg:grid-cols-12 lg:gap-8 flex flex-col lg:flex-none mx-auto  py-6 ">
+        <div class="px-4  sm:text-center  lg:col-span-6 lg:text-left lg:flex lg:items-center">
           <div>
-            <h1 class="mt-4 text-4xl tracking-tight font-extrabold  sm:leading-none  lg:text-5xl ">
+            <h1 class="mt-4 text-4xl tracking-tight font-extrabold  sm:leading-none  lg:text-4xl ">
               <span class=" md:block">
                 {aboutTitle1}
                 <span class="text-sunset-600 font-bold">
@@ -53,11 +53,11 @@ export default function AboutSection({
           </div>
         </div>
 
-        <div class="lg:col-span-6 flex mx-auto h-96 mt-10 ">
+        <div class="lg:col-span-6 flex mx-auto h-96 mt-10 text-white">
           <div class="-ml-36 sm:-ml-36 flex">
             <div
               style={{ borderRadius: "3rem" }}
-              class=" w-40 h-40 bg-yellow-500 rounded-3xl opacity-60 mt-12 text-white flex flex-col justify-center items-center  "
+              class=" w-40 h-40 bg-yellow-500 rounded-3xl opacity-40 mt-12  flex flex-col justify-center items-center  "
             >
               <p class="text-4xl "> {aboutBallonName1}</p>
               <p class="text-2xl  ">{aboutBallonDescription1}</p>
@@ -66,7 +66,7 @@ export default function AboutSection({
               style={{ backgroundColor: "#f3a592", borderRadius: "3rem" }}
               class="w-40 h-40 sm:w-56 sm:h-56  flex   rounded-3xl  absolute ml-32 sm:ml-36 opacity-80"
             >
-              <div class="absolute inset-0 flex flex-col items-center justify-center text-white">
+              <div class="absolute inset-0 flex flex-col items-center justify-center ">
               <p class="text-4xl "> {aboutBallonName2}</p>
               <p class="text-2xl text-center ">{aboutBallonDescription2}</p>
               </div>
@@ -75,7 +75,7 @@ export default function AboutSection({
               style={{ borderRadius: "3rem" }}
               class="w-44 h-44 bg-blue-300  mr-2 absolute mt-40 ml-20 opacity-80"
             >
-              <div class="absolute inset-0 flex flex-col items-center justify-center text-white">
+              <div class="absolute inset-0 flex flex-col items-center justify-center ">
               <p class="text-4xl "> {aboutBallonName3}</p>
               <p class="text-2xl  text-center">{aboutBallonDescription3}</p>
               </div>

@@ -3,7 +3,9 @@ templatekey: index
 slug: /
 introTitle1: < Coding
 introTitle2: for integration >
-introDescription: We aim at integrating refugees and vulnerable migrants using a truly global language coding. Through a free 7-months programming course we give the necessary 
+introDescription: "We aim at integrating refugees and vulnerable migrants using a truly global language: coding.
+Through a free 7-months programming course we give the necessary tools one needs to enter the job market and develop a sustainable livelihood. 
+Even when starting from scratch."
 introImage: /img/codingfor.png
 colabTitle: 'In collaboration with:' 
 aboutTitle1: "About"

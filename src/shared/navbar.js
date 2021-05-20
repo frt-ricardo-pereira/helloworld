@@ -49,7 +49,7 @@ export default function Navbar() {
               </button>
             </div>
 
-            <Link className="flex-shrink-0 flex items-center cursor-pointer"  to="/" >
+            <Link className="flex-shrink-0 flex items-center cursor-pointer "  to="/" >
               <img
                 class="hidden lg:block h-8 w-auto"
                 src={FuseImage}
@@ -57,29 +57,30 @@ export default function Navbar() {
               ></img>
             </Link>
 
-            <div class="hidden md:ml-6 md:flex md:space-x-8">
+            <div class="hidden md:ml-6 md:flex md:space-x-8 ">
               <Link
-                className="text-gray-900 inline-flex items-center px-1 pt-1   "
+                className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2  "
                 to="/about"
+              
                 activeClassName="border-sunset-700 border-b-1"
               >
                 About
               </Link>
               <Link
-                className=" text-gray-900 inline-flex items-center px-1 pt-1    "
+                className=" border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2   "
                 to="/ourteam"
-                activeClassName="border-sunset-700 border-b-2 text-sunset-700"
+                activeClassName="border-sunset-700 border-b-2 text-sunset-700 "
               >
                 The Team
               </Link>
               <Link
-                className="text-gray-900 inline-flex items-center px-1 pt-1   "
+                className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2    "
                 to="/about"
               >
                 The Program
               </Link>
               <Link
-                className="text-gray-900 inline-flex items-center px-1 pt-1  "
+                className="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2  "
                 to="/about"
               >
                 Volunteer/Donate

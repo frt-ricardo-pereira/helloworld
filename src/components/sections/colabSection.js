@@ -5,10 +5,10 @@ export default function ColabSection({
 
 }) {
   return (
-    <section class="  ">
+    <section class=" bg-gray-50 bg-opacity-40 ">
       <p class="text-center  text-lg text-gray-600 ">{colabTitle}</p>
 
-      <div class="  mt-2 opacity-70 bg-gray-50 shadow">
+      <div class="  mt-2 opacity-60 bg-gray-50 shadow">
         <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
           <div class="grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
             <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
