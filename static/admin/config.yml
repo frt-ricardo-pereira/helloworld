@@ -1,0 +1,44 @@
+backend:
+  name: git-gateway
+  branch: master # Branch to update (optional; defaults to master)
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: 'pages'
+    label: 'Pages'
+    files:
+      - file: "src/markdown-pages/index.md"
+        name: 'index'
+        label: 'Intro'
+        editor:
+        preview: true
+        fields:
+          - {label: 'Index', name: 'slug', widget: 'hidden', default: '/'}
+          - {label: 'Intro - Title 1', name: 'introTitle1', widget: 'string'}
+          - {label: 'Intro - Title 2', name: 'introTitle2', widget: 'string'}
+          - {label: 'Intro - Description', name: 'introDescription', widget: 'text'}
+          - {label: 'Intro - Image', name: 'introImage', widget: 'image'}
+          - {label: 'Colab - Title', name: 'colabTitle', widget: 'string'}
+          - {label: 'About - Title 1', name: 'aboutTitle1', widget: 'string'}
+          - {label: 'About - Title 2', name: 'aboutTitle2', widget: 'string'}
+          - {label: 'About - Description', name: 'aboutDescription', widget: 'text' }
+          - {label: 'About - Button Send Email Name', name: 'aboutSendEmailName', widget: 'string'}
+          - {label: 'About - Button Send Email To', name: 'aboutSendEmailTo', widget: 'string'}
+          - {label: 'About - Button Apply Name', name: 'aboutApplyButtonName', widget: 'string'}
+          - {label: 'About - Button Apply Link', name: 'aboutApplyButtonTo', widget: 'string'}
+          - {label: 'About - Ballon Name 1', name: 'aboutBallonName1', widget: 'string'}
+          - {label: 'About - Ballon Description 1', name: 'aboutBallonDescription1', widget: 'string'}
+          - {label: 'About - Ballon Name 2', name: 'aboutBallonName2', widget: 'string'}
+          - {label: 'About - Ballon Description 2', name: 'aboutBallonDescription2', widget: 'string'}
+          - {label: 'About - Ballon Name 3', name: 'aboutBallonName3', widget: 'string'}
+          - {label: 'About - Ballon Description 3', name: 'aboutBallonDescription3', widget: 'string'}
+          - {label: 'The Program - Title', name: 'theProgramTitle', widget: 'string'}
+          - {label: 'The Program - Description', name: 'theProgramDescription', widget: 'text'}
+          - {label: 'The Program - Image', name: 'theProgramImage', widget: 'image'}
+          - {label: 'NewsLetter - Title 1', name: 'newsletterTitle1', widget: 'string'}
+          - {label: 'NewsLetter - Title 2', name: 'newsletterTitle2', widget: 'string'}
+          - {label: 'NewsLetter - Button Subscribe Name', name: 'newsletterSubscribeName', widget: 'string'}
+       
+        
