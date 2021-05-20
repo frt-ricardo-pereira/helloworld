@@ -4,7 +4,7 @@
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
 
-module.exports = {
+ module.exports = {
   siteMetadata: {
     title: `Fuse`,
     description: `We aim at integrating refugees and vulnerable migrants using a truly global language coding. Through a free 7-months programming course we give the necessary`,
@@ -28,8 +28,14 @@ module.exports = {
       },
     },
     "gatsby-plugin-offline",
-
     "gatsby-plugin-react-helmet",
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: "uploads",
+        path: `${__dirname}/static/img`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -40,11 +46,24 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/static/img`,
+        name: "images",
+        path: `${__dirname}/src/img`,
       },
     },
-    "gatsby-transformer-remark",
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: [          
+          {
+            resolve: 'gatsby-remark-copy-linked-files',
+            options: {
+              destinationDir: 'static',
+            },
+          },
+        ],
+      },
+    },
+
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {},
