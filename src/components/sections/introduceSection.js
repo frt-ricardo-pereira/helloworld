@@ -9,7 +9,7 @@ export default function IntroduceSection({
   introImage,
 }) {
   return (
-    <section class="bg-gray-50 bg-opacity-30 py-12 px-12 ">
+    <section class="bg-gray-50 bg-opacity-20 py-12 px-12 ">
       <div class="max-w-7xl  lg:grid lg:grid-cols-12 lg:gap-8 flex flex-col lg:flex-none mx-auto ">
         <div class="px-4 sm:px-6 sm:text-center  lg:col-span-6 lg:text-left lg:flex lg:items-center">
           <div>

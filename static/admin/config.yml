@@ -16,9 +16,25 @@ collections:
       - {label: "Photo", name: "photo" , widget: "image"}
       - {label: "Name", name: "name", widget: "string"}
       - {label: "Job", name: "job", widget: "string"}
-      - {label: "Twitter", name: "twitter", widget: "string", required: false}
-      - {label: "facebook", name: "facebook", widget: "string" , required: false}
-      - {label: "Linkedin", name: "linkedin", widget: "string", required: false}
+      - {label: "Twitter", name: "twitter", widget: "string", required: false , default: ""}
+      - {label: "facebook", name: "facebook", widget: "string" , required: false , default: ""}
+      - {label: "Linkedin", name: "linkedin", widget: "string", required: false , default : ""}
+
+  - name: "geral"
+    label: "Geral"
+    files:
+      - file: src/markdown-content/navbar.md
+        name: "navbar"
+        label: "Menu"
+        editor:
+        preview: true
+        fields:
+          - {label: 'Link - Name 1', name: 'linkName1', widget: 'string'}
+          - {label: 'Link - Name 2', name: 'linkName2', widget: 'string'}
+          - {label: 'Link - Name 3', name: 'linkName3', widget: 'string'}
+          - {label: 'Link - Name 4', name: 'linkName4', widget: 'string'}
+          - {label: 'Button - Name', name: 'ButtonName', widget: 'string'}
+          - {label: 'Button - Url', name: 'ButtonUrl', widget: 'string'}
   - name: 'pages'
     label: 'Pages'
     files:
