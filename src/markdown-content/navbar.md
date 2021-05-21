@@ -1,9 +1,9 @@
 ---
-templatekey: ourteam
-linkName1: linkName1
-linkName2: our team
-linkName3: Ornare sagittis, 
-linkName4: linkName2
-ButtonName: ButtonName
+templatekey: navbar
+linkName1: About
+linkName2: The Program
+linkName3: Team 
+linkName4: Donations
+ButtonName: Apply
 ButtonUrl: ButtonUrl
 ---

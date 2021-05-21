@@ -23,7 +23,7 @@ const OurTeamTemplate = ({
                     <img
                       width="300px"
                       height="300px"
-                      class="mx-auto h-40 w-40 rounded-full bject-cover"
+                      class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56 object-cover"
                       src={
                         node.node.frontmatter.photo +
                         "?nf_resize=smartcrop&w=300&h=300"
@@ -110,7 +110,6 @@ const OurTeamTemplate = ({
                     </div>
                   </div>
                 </li>
-                
               ))}
             </ul>
           </div>

@@ -47,6 +47,15 @@ collections:
           - {label: 'Team Title 1', name: 'teamTitle1', widget: 'string'}
           - {label: 'Team Title 2', name: 'teamTitle2', widget: 'string'}
           - {label: 'Team SubTitle', name: 'teamSubTitle', widget: 'string'}
+      - file: "src/markdown-content/donations.md"
+        name: "donations"
+        label: "Donations"
+        editor:
+        preview: true
+        fields:
+          - {label: 'Donation Title 1', name: 'donationTitle1', widget: 'string'}
+          - {label: 'Donation Title 2', name: 'donationTitle2', widget: 'string'}
+          - {label: 'Donation SubTitle', name: 'donatioSubTitle', widget: 'string'}
       - file: "src/markdown-content/index.md"
         name: 'index'
         label: 'Intro'

@@ -1,10 +1,13 @@
 import CMS from 'netlify-cms-app'
-import styles from '../styles/global.css'
+import * as locals from '../styles/global.css'
 
 import IndexPreview from './preview-templates/IndexPreview'
-import OurTeamTemplate from './preview-templates/OurTeamTemplate'
+import OurTeamTemplate from './preview-templates/OurTeamPreview'
+import NavBarPreview from './preview-templates/NavBarPreview'
 
-CMS.registerPreviewStyle({styles});
+CMS.registerPreviewStyle({locals});
 CMS.registerPreviewTemplate('index', IndexPreview)
 CMS.registerPreviewTemplate('ourteam', OurTeamTemplate)
+CMS.registerPreviewTemplate('navbar', NavBarPreview)
+
 
