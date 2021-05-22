@@ -30,9 +30,6 @@ const DonationTemplate = ({
         const { id } = await response.json()
         const stripe = await stripePromise
         const { error } = await stripe.redirectToCheckout({ sessionId: id })
-        // If `redirectToCheckout` fails due to a browser or network
-        // error, display the localized error message to your customer
-        // using `error.message`.
         alert(error.message)
       })
       .catch(err => alert(err.message))
