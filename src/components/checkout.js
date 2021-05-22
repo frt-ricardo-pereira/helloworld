@@ -1,53 +1,31 @@
-import React, { useState } from "react"
+import React from "react"
+
 import { loadStripe } from "@stripe/stripe-js"
-const buttonStyles = {
-  fontSize: "13px",
-  textAlign: "center",
-  color: "#000",
-  padding: "12px 60px",
-  boxShadow: "2px 5px 10px rgba(0,0,0,.1)",
-  backgroundColor: "rgb(255, 178, 56)",
-  borderRadius: "6px",
-  letterSpacing: "1.5px",
-}
-const buttonDisabledStyles = {
-  opacity: "0.5",
-  cursor: "not-allowed",
-}
-let stripePromise
-const getStripe = () => {
-  if (!stripePromise) {
-    stripePromise = loadStripe("pk_live_51HZNYxLZlsLhHCWp3J6tRrGyC1ISyGG7jJTTfRh4yWwkafLv35dcyrs8MCW3GxljzRnWCHpfP51Hnt5hqQy2zXnp00tQSSVEqV")
-  }
-  return stripePromise
-}
+
+const stripePromise = loadStripe('pk_live_51HZNYxLZlsLhHCWp3J6tRrGyC1ISyGG7jJTTfRh4yWwkafLv35dcyrs8MCW3GxljzRnWCHpfP51Hnt5hqQy2zXnp00tQSSVEqV')
+
 const Checkout = () => {
-  const [loading, setLoading] = useState(false)
-  const redirectToCheckout = async event => {
-    event.preventDefault()
-    setLoading(true)
-    const stripe = await getStripe()
-    const { error } = await stripe.redirectToCheckout({
-      mode: "payment",
-      lineItems: [{ price: "price_1Itf6OLZlsLhHCWp7fpEP4zq", quantity: 1 }],
-      successUrl: 'http://localhost/donations',
-      cancelUrl: `https://romantic-clarke-8593f9.netlify.app/`,
+
+  const onClick = () => {
+
+
+    fetch("/.netlify/functions/orderCreate", {
+      method: "POST",
+      
     })
-    if (error) {
-      console.warn("Error:", error)
-      setLoading(false)
-    }
+      .then(async response => {
+        const { id } = await response.json()
+        const stripe = await stripePromise
+        const { error } = await stripe.redirectToCheckout({ sessionId: id })
+        // If `redirectToCheckout` fails due to a browser or network
+        // error, display the localized error message to your customer
+        // using `error.message`.
+        alert(error.message)
+      })
+      .catch(err => alert(err.message))
   }
-  return (
-    <button
-      disabled={loading}
-      style={
-        loading ? { ...buttonStyles, ...buttonDisabledStyles } : buttonStyles
-      }
-      onClick={redirectToCheckout}
-    >
-      BUY MY BOOK
-    </button>
-  )
+
+  return <button onClick={onClick}>Checkout for ${22 / 100}</button>
 }
+
 export default Checkout

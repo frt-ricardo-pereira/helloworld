@@ -8,7 +8,7 @@ const OurTeam = ({ data }) => {
   const { markdownRemark: post } = data
   const { edges: members } = data.allMarkdownRemark
   return (
-    <div class="flex flex-col h-screen  bg-gray-50 bg-opacity-30  ">
+    <div class="flex flex-col h-screen  bg-gray-50 bg-opacity-20  ">
       <Layout>
         <Seo
           title={
